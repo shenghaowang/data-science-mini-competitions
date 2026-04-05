@@ -56,3 +56,12 @@ print(f"Validation ROC AUC: {roc_auc:.4f}")
 
 # Validation ROC AUC: 0.8555
 # %%
+# Create submission file
+test_df = pd.read_csv(data_dir / "test.csv")
+test_X = test_df.drop(columns=["id"])
+
+submission_df = pd.DataFrame({
+    "id": test_df["id"],
+    "stroke": model.predict_proba(test_X)[:, 1]
+})
+submission_df.to_csv(data_dir / "submission.csv", index=False)

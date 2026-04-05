@@ -2,6 +2,8 @@
 
 Collection of work files for past data science mini competitions.
 
+* [Stroke Risk Prediction](https://www.kaggle.com/competitions/introtoml)
+
 ## 📦 Installation
 
 While Docker is the recommended method for setting up the environment, the following steps provide a quick alternative using a Python virtual environment:

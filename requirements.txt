@@ -1,0 +1,10 @@
+numpy
+pandas
+seaborn
+jupyter
+matplotlib
+scikit-learn
+plotly
+catboost
+lightgbm
+pre-commit

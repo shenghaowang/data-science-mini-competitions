@@ -14,6 +14,9 @@ print(train_df.shape)
 train_df.head()
 
 # %%
+train_df.info()
+
+# %%
 # Gender
 train_df['gender'].value_counts()
 # %%
@@ -89,12 +92,23 @@ fig = px.imshow(
 fig.show()
 
 # %%
+smoking_order = {
+    'never smoked': 0,
+    'Unknown': 1,
+    'formerly smoked': 2,
+    'smokes': 3,
+}
+
+train_df['smoking_status'] = train_df['smoking_status'].map(smoking_order)
+
+# %%
 # Create interaction features
 interactions = {
     'age_x_hypertension': train_df['age'] * train_df['hypertension'],
     'age_x_heart_disease': train_df['age'] * train_df['heart_disease'],
     'age_x_bmi': train_df['age'] * train_df['bmi'],
     'glucose_x_bmi': train_df['avg_glucose_level'] * train_df['bmi'],
+    'smoking_x_age': train_df['smoking_status'] * train_df['age'],
 }
 
 interact_df = pd.DataFrame(interactions)

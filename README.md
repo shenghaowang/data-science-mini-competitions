@@ -3,6 +3,8 @@
 Collection of work files for past data science mini competitions.
 
 * [Stroke Risk Prediction](https://www.kaggle.com/competitions/introtoml)
+* [House Prices Prediction](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)
+* [Disaster Tweets Classification](https://www.kaggle.com/competitions/nlp-getting-started)
 
 ## 📦 Installation
 
